@@ -4,21 +4,24 @@
     <HelloWorld msg="Vue 3 is liveeeee!" />
     <select name="color" id="color" v-model="selectedColor">
       <option value="" disabled selected> Select a color</option>
-      <option :value="color" v-for="(color, index) in colors" :key="index">{{
-        color
-      }}</option></select
-    >
+      <option :value="color" v-for="(color, index) in colors" :key="index"
+        >{{ color }}
+      </option>
+    </select>
+    <video-player></video-player>
   </div>
 </template>
 
 <script>
   import HelloWorld from "@/components/HelloWorld.vue";
+  import videoPlayer from "@/components/videoComponent.vue";
   import { computed } from "vue";
 
   export default {
     name: "Home",
     components: {
       HelloWorld,
+      videoPlayer,
     },
     data() {
       return {
@@ -34,3 +37,4 @@
     },
   };
 </script>
+<style></style>
